@@ -34,10 +34,12 @@ end
 
 
 
-def end_game
+def end_game(total)
   # code #end_game here
   puts "Sorry, your card total is #{total}, thank you"
 end
+
+
 
 
 describe "#end_game" do
