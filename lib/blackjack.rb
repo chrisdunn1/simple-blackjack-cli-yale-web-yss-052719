@@ -65,7 +65,7 @@ def hit?(total)
     return total
   when 'h'
   keep_going = deal_card
-  total += deal_card
+  total += keep_going
   display_card_total(total)
   return total
 else
@@ -79,7 +79,7 @@ end
 def invalid_command
   puts "Please enter a valid command"
   prompt_user
-end 
+end
 
 #####################################################
 # get every test to pass before coding runner below #
