@@ -53,23 +53,6 @@ return total
 end
 
 
-describe "#initial_round" do
-
-  it "calls on #deal_card twice and returns the sum" do
-    expect(self).to receive(:deal_card).at_least(:twice).and_return(6)
-    expect(initial_round).to eq(12)
-  end
-
-  it "calls on the '#display_card_total' to print sum of cards" do
-    expect(self).to receive(:deal_card).at_least(:twice).and_return(6)
-    expect($stdout).to receive(:puts).with(/Your cards add up to /)
-    initial_round
-  end
-
-end
-
-
-
 
 
 
