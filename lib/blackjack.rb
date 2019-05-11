@@ -36,7 +36,18 @@ end
 
 def end_game
   # code #end_game here
+  puts "Sorry, your card total is #{total}, thank you"
 end
+
+
+describe "#end_game" do
+  it "prints apology, card total, and thank you message" do
+    expect($stdout).to receive(:puts).with("Sorry, you hit 27. Thanks for playing!")
+    end_game(27)
+  end
+end
+
+
 
 def initial_round
   # code #initial_round here
