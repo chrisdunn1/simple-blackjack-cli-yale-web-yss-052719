@@ -55,7 +55,6 @@ end
 
 
 
-
 def hit?(total)
   # code hit? here
   prompt_user
@@ -63,56 +62,24 @@ def hit?(total)
 
   case drawcard
   when 's'
-##
-return total
-    
+    return total
   when 'h'
-  else
+  keep_going = deal_card
+  total += deal_card
+  display_card_total(total)
+  return total
+else
 
+  invalid_command
+  # code invalid_command here
+return total
 end
-
-describe "#hit?" do
-  before(:each) do
-    def get_user_input
-      "s"
-    end
-  end
-
-  it "calls on #prompt_user then #get_user_input" do
-    expect($stdout).to receive(:puts).with("Type 'h' to hit or 's' to stay")
-    expect(self).to receive(:get_user_input).and_return("s")
-    hit?(7)
-  end
-
-  it "returns an integer which is the card total" do
-    expect(self).to receive(:get_user_input).and_return("s")
-    expect(hit?(20)).to eq(20)
-  end
-
-  it "does not deal another card if user types 's'" do
-    expect(self).to receive(:get_user_input).and_return("s")
-    expect(hit?(7)).to eq(7)
-  end
-
-  it "deals another card when user types 'h'" do
-    expect(self).to receive(:get_user_input).and_return("h")
-    expect(self).to receive(:deal_card).and_return(7)
-    expect(hit?(7)).to eq(14)
-  end
-
 end
-
-
-
-
-
-
-
-
 
 def invalid_command
-  # code invalid_command here
-end
+  puts "Please enter a valid command"
+  prompt_user
+end 
 
 #####################################################
 # get every test to pass before coding runner below #
