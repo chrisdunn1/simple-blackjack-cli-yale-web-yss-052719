@@ -43,9 +43,10 @@ end
 def initial_round
   # code #initial_round here
 
-  gets.chomp
-  gets.chomp
+  card_one = deal_card
+  card_two = deal_card
 
+puts "Your cards add up to "
 end
 
 
