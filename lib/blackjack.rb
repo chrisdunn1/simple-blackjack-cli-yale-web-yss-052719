@@ -46,7 +46,10 @@ def initial_round
   card_one = deal_card
   card_two = deal_card
 
-puts "Your cards add up to "
+puts "#{card_one} and #{card_two} "
+total = card_one + card_two
+display_card_total(total)
+return total
 end
 
 
