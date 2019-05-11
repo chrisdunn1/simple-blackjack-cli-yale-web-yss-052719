@@ -84,15 +84,3 @@ end
 #####################################################
 # get every test to pass before coding runner below #
 #####################################################
-
-def runner
-  # code runner here
-welcome
-sum =initial_round
-until sum > 21
-  sum = hit?(sum)
-
-end
-end_game(sum)
-end
-puts runner
