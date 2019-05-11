@@ -35,7 +35,7 @@ end
 
 def end_game(total)
   # code #end_game here
-  puts "Sorry, your card total is #{total}, thank you"
+  puts "Sorry, you hit #{total}. Thanks for playing!"
 end
 
 
